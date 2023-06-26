@@ -2,10 +2,8 @@
 from hypothesis import strategies as st
 
 # local
-import ivy
 import ivy_tests.test_ivy.helpers as helpers
 from ivy_tests.test_ivy.helpers import handle_frontend_test
-
 
 
 @handle_frontend_test(
@@ -19,8 +17,6 @@ from ivy_tests.test_ivy.helpers import handle_frontend_test
     ),
     test_with_out=st.just(False),
 )
-
-
 def test_mindspore_softmax(
     *,
     dtype_x_and_axis,
@@ -28,7 +24,7 @@ def test_mindspore_softmax(
     fn_tree,
     frontend,
     test_flags,
-):   
+):
     input_dtype, x, axis = dtype_x_and_axis
     helpers.test_frontend_function(
         input_dtypes=input_dtype,
@@ -39,4 +35,3 @@ def test_mindspore_softmax(
         x=x[0],
         axis=axis,
     )
-    

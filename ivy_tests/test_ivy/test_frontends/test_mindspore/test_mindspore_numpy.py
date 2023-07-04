@@ -10,7 +10,7 @@ from ivy_tests.test_ivy.helpers import handle_frontend_test
     fn_tree="mindspore.softmax",
     dtype_x_and_axis=helpers.dtype_values_axis(
         available_dtypes=helpers.get_dtypes("float"),
-        min_num_dims=2,
+        min_num_dims=1,
         max_axes_size=1,
         force_int_axis=True,
         valid_axis=True,

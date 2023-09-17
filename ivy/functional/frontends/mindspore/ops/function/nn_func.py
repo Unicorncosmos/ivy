@@ -10,6 +10,7 @@ from ivy.functional.frontends.tensorflow.func_wrapper import to_ivy_arrays_and_b
     {"2.5.0 and below": ("float32", "float16")},
     "Mindspore",
 )
+
 @to_ivy_arrays_and_back
 def softmax(x, axis=-1):
     return ivy.softmax(x, axis=axis)
